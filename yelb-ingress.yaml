@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: test-ingress
+spec:
+  rules:
+  - host: "yelb.ali-avi.vmwdxb.com"
+    http:
+      paths:
+      - path: 
+        backend:
+          serviceName: yelb-ui
+          servicePort: 80

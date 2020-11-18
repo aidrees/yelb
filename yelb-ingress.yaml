@@ -4,7 +4,7 @@ metadata:
   name: test-ingress
 spec:
   rules:
-  - host: "yelb.ali-avi.vmwdxb.com"
+  - host: "yelb"
     http:
       paths:
       - path: 

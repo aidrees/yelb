@@ -4,7 +4,7 @@ metadata:
   name: yelb-ingress
 spec:
   rules:
-  - host: "yelb.ali-avi.vmwdxb.com"
+  - host: "yelb.k8s.vmwdxb.com"
     http:
       paths:
       - path: 

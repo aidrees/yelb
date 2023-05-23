@@ -1,14 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  namespace: yelb
   name: yelb-ingress
+  namespace: yelb
+  labels:
+    app: yelb
 spec:
   rules:
   - host: "yelb.k8s.vmwdxb.com"
     http:
       paths:
-      - path: 
+      - pathType: Prefix
+        path: "/"
         backend:
-          serviceName: yelb-ui
-          servicePort: 80
+          service:
+            name: yelb-ui
+            port:
+              number: 80
